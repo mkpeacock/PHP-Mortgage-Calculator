@@ -1,15 +1,11 @@
 <?php
 
-define( "FRAMEWORK_PATH", dirname( __FILE__ ) ."/" );
-
-require_once( 'splClassLoader.php' );
-$classLoader = new SplClassLoader('CentralApps\Mortgage', FRAMEWORK_PATH );
-$classLoader->register();
+require_once(__DIR__.'/CentralApps/MortgageCalculator/Calculator.php');
 
 
-$calculator = new CentralApps\Mortgage\Calculator();
+$calculator = new CentralApps\MortgageCalculator\Calculator();
 $calculator->setAmountBorrowed( 125000 );
 $calculator->setInterestRate( 6 );
 $calculator->setYears( 25 );
-echo 'Monthly repayment costs &pound;' . $calculator->calculateRepayment() . '<br />';
-echo 'Monthly interest-only costs &pound;' . $calculator->calculateInterestOnlyPayment();
+echo 'Monthly repayment costs £' . $calculator->calculateRepayment() . PHP_EOL;
+echo 'Monthly interest-only costs £' . $calculator->calculateInterestOnlyPayment() . PHP_EOL;

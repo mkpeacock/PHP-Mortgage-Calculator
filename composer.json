@@ -1,0 +1,21 @@
+{
+    "name": "centralapps/mortgage-calculator",
+    "type": "library",
+    "description": "A class for calculating remaining amounts on a mortgage",
+    "keywords": ["mortgage", "calculator", "interest only", "repayment", "interest"],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "authors": [
+    	{
+    		"name": "Michael Peacock",
+    		"email": "mkpeacock@gmail.com",
+    		"homepage": "http://www.twitter.com/michaelpeacock",
+    		"role": "Developer"
+    	}
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-0": { "CentralApps\\MortgageCalculator": "src/" }
+    }
+}
